@@ -1,20 +1,24 @@
 package com.example.sportflow.Model;
 
+import java.util.Date;
+
 public class seance {
     private int idEntraineur;
     private int idMember;
-    private String date;
-    private String heure;
 
+    private Date dateHeure;
 
-    public seance(int idEntraineur, int idMember, String date, String heure) {
-        this.idEntraineur = idEntraineur;
-        this.idMember = idMember;
-        this.date = date;
-        this.heure = heure;
-    }
+    private int idSeance;
+
 
     public seance() {
+    }
+
+    public seance(int idEntraineur, int idMember, Date dateHeure, int idSeance) {
+        this.idEntraineur = idEntraineur;
+        this.idMember = idMember;
+        this.dateHeure = dateHeure;
+        this.idSeance = idSeance;
     }
 
     public int getIdEntraineur() {
@@ -33,19 +37,19 @@ public class seance {
         this.idMember = idMember;
     }
 
-    public String getDate() {
-        return date;
+    public Date getDateHeure() {
+        return dateHeure;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateHeure(Date dateHeure) {
+        this.dateHeure = dateHeure;
     }
 
-    public String getHeure() {
-        return heure;
+    public int getIdSeance() {
+        return idSeance;
     }
 
-    public void setHeure(String heure) {
-        this.heure = heure;
+    public void setIdSeance(int idSeance) {
+        this.idSeance = idSeance;
     }
 }
