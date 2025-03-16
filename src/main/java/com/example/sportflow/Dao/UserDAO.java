@@ -9,10 +9,6 @@ public class UserDAO {
         this.connection = connection;
     }
 
-    public void addUser(user u) throws SQLException {
-        String query =  "SELECT * FROM users WHERE role = ?";
-        PreparedStatement stmt = connection.prepareStatement(query);
-        stmt.setString(1, u.getRole());
-        stmt.executeUpdate();
-    }
+
+
 }
